@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="content">
+        <h2 class="Heading">weather app</h2>
+        <div class="btn-container">
+          <p UserWeatherbtn class="user-btn">User weather</p>
+          <p SearchWeatherbtn class="search-btn">Search weather</p>
+        </div>
+
+        <!-- Permissiom vali  tab  -->
+
+        <div grantAccessContainer class="grantAccessContainer">
+          <img src="./assets/location.png" height="80" width="80" />
+          <h2>Grant location Access</h2>
+          <p>Allow Access to give Weather Information</p>
+          <!-- <p class="grantAccess">Grant Access</p> -->
+          <button class="grantAccess">grantAccess</button>
+          <!-- <p class="error"></p> -->
+        </div>
+
+        <!-- Search Weather vali tab  -->
+
+        <form searchWeatherContainer class="searchWeatherContainer">
+          <input class="input" placeholder="Search for city..." />
+          <button class="btn">
+            <img
+              src="./assets/search.png"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!-- User Weather Information -->
+
+        <div UserWeatherContainer class="WeatherContainer">
+          <div Placeinfo class="city-container">
+            <p cityName class="city"></p>
+            <img countryIcon  class="countryIcon"/>
+          </div>
+
+          <p aboutWeather class="aboutWeather"></p>
+          <img aboutWeatherImg  class="aboutWeatherImg" height="90" width="90"/>
+          <p temp class="temp"></p>
+          <div BasicWeatherInfo class="BasicWeatherInfo">
+            <div windInfo class="extrainfo">
+              <img src="./assets/wind.png" height="60" width="60" />
+              <p class="label">Windspeed</p>
+              <p windspeed class="labeldata"></p>
+            </div>
+
+            <div Humid class="extrainfo">
+              <img src="./assets/humidity.png" height="60" width="60" />
+              <p class="label">Humidity</p>
+              <p humidity class="labeldata"></p>
+            </div>
+
+            <div cloudiness class="extrainfo">
+              <img src="./assets/cloud.png" alt="" height="60" width="60" />
+              <p class="label">Clouds</p>
+              <p clouds class="labeldata"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- loading tab  -->
+
+        <div class="loadingTab">
+          <img src="./assets/loading.gif" alt="" height="120" width="120" />
+          <p>loading</p>
+        </div>
+      </div>
+
+
+      <div class="error-container">
+        <div class="inner-error">
+          <img src="./assets/not-found.png" alt="">
+          <h2>City not found  !!!</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
