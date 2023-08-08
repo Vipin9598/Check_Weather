@@ -100,8 +100,9 @@ function renderWeatherInfo(result){
     temp.innerText=temp.innerText+' °C';    
 
     windSpeed.innerText=result?.wind?.speed;
-    humidity.innerText=result?.main?.humidity;
-    clouds.innerText=result?.clouds?.all;
+    windSpeed.innerText=windSpeed.innerText+' m/s';   
+    humidity.innerText=result?.main?.humidity+"%";
+    clouds.innerText=result?.clouds?.all+"%";
     flag.src = `https://flagcdn.com/144x108/${result?.sys?.country.toLowerCase()}.png`;
     aboutWeatherImg.src=`http://openweathermap.org/img/w/${result?.weather?.[0]?.icon}.png`;
 
