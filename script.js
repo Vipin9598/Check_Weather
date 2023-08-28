@@ -5,6 +5,7 @@ let searchWeathertab=document.querySelector("[SearchWeatherbtn]");
 let searchInput=document.querySelector(".input");
 let grantAccessContainer=document.querySelector("[grantAccessContainer]");
 let loadingScreen=document.querySelector(".loadingTab");
+let error=document.querySelector(".error-container");
 const API_key="83eb83a4191da1843d2246ca92e26a27";
 
 // to  chaliye ab suru krte h
@@ -27,6 +28,7 @@ searchWeathertab.addEventListener('click',()=>{
 function switchTab(clickedtab){
     if(currentTab != clickedtab){
         currentTab.classList.remove('btn-active');
+        error.classList.remove("active");
         currentTab=clickedtab;
         currentTab.classList.add('btn-active');
 
@@ -161,7 +163,7 @@ async function fetchcityweatherInfo(cityname){
         
         
         loadingScreen.classList.remove("active");
-        const error=document.querySelector(".error-container");
+        
         if(result?.name===undefined){
             searchInput.value="";
             error.classList.add("active");
